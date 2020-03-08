@@ -98,7 +98,32 @@
 - `fold {options} file_name` -- wrap each input line to fit in specified width.
   - Options (most popular):
     - b - limit the width of the output by the number of bytes (e.x. b40)
-- `gedit` -- text editor for the GNOME Desktop.
+- `gedit file_name` -- text editor for the GNOME Desktop.
+- `sort {options} file_name` -- sort lines of text files.
+  - Options (most popular):
+    - r - sort in reverse order
+    - n - sort a file numerically
+    - u - sort and remove duplicates
+- `test EXPRESSION` -- check file types and compare values.
+- `expand {options} file_name` -- convert tabs to spaces.
+- `unexpand {options} file_name` -- convert spaces to tabs.
+- `fmt {options} file_name` --  simple optimal text formatter.
+- `pr {options} file_name` -- convert text files for printing.
+- `split {options} file_name` -- split a file into pieces.
+- `csplit {options} file_name` -- split a file into sections determined by context lines.
+- `grep {options} PATTERNS file_name` -- print lines that match patterns.
+- `sum {options} file_name` -- checksum and count the blocks in a file.
+- `cksum {options} file_name` -- checksum and count the bytes in a file.
+- `md5sum {options} file_name` -- compute and check MD5 message digest.
+- `sha1sum {options} file_name` -- compute and check SHA1 message digest.
+- `shuf {options} file_name` --  generate random permutations.
+- `uniq {options} file_name` -- report or omit repeated lines.
+- `comm {options} file_name` -- compare two sorted files line by line.
+- `tsort file_name` -- perform topological sort.
+- `cut {options} file_name` -- remove sections from each line of files.
+- `paste {options} file_name` -- merge lines of files.
+- `join {options} file_name1 file_name2` -- join lines of two files on a common field.
+
 ### Compress & extract files
 WIP
 ### Special file types
