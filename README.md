@@ -21,6 +21,10 @@
 
 # Linux commands
 
+This section gives insight into the most important commands of Linux system. Along with the individual commands, where appropriate, 
+most popular parameters are listed and a typical sample application is introduced. To learn more about the various 
+commands, it is usually possible to get additional information with the ***man*** program followed by the name of the command, 
+for example,` man ls`.
 ## Managing files & directories
 ### Basic commands
 - `cd examlpe` -- change directory to example.
@@ -28,8 +32,8 @@
   - `cd ../..` -- move up two directory,
   - `cd -` -- change to the previous directory,
   - `cd ~` -- change to home directory.
-- `pwd` -- shows the name of the working directory.
-- `ls {options}` -- lists information about files and directories.
+- `pwd` -- print the absolute path of current directory.
+- `ls {OPTION}... {FILE}...` -- list directory contents.
   - Options (most popular):
     - t - sort the file by modification time,
     - 1 - display one file per line, 
@@ -39,48 +43,48 @@
     - i - print the index number of each file,
     - S - sort by file size, largest first
     - --group-directories-first - group directories before files.
-- `cp {options} source destination`  -- copy files or directories.
+- `cp {OPTION}... {SOURCE}... {DIRECTORY}...`  -- copy *source(s)* to *directory*.
   - Options (most popular):
     - i - ask for permission before user overwrite the destination file,
     - r - copy the entire directory structure,
     - p - preserves the time of the last data modification and the time of the last access, the ownership 
     and the file permission-bits of each source file in the corresponding destination
     file. 
-- `mv {options} source destination` -- moves and renames files and directories.
-  - `mv {options} file_name1 file_name2` - rename file named file_name1 to file_name2,
-  - `mv {options} file_name [file_name2...] destination` - move source file(s) to destination.
+- `mv` -- move (rename) files and directories
+  - `mv {OPTION}... {SOURCE} {DEST}` - rename *source* to *dest*,
+  - `mv {OPTION}... {SOURCE}... {DIRECTORY}` - move *source(s)* to *directory*.
   - Options (most popular):
     - i - prompt before overwriting an existing file,
     - n - never overwrite an existing file.
-- `mkdir directory_name` -- create new directory.
-- `rmdir directory_name` -- remove empty directory.
-- `rm {options} name` -- remove file (by default it does not remove directories).
+- `mkdir {OPTION}... {DIRECTORY}...` -- create the *directory(ies)*, if the do not already exist.
+- `rmdir {OPTION}... {DIRECTORY}...` -- remove empty *directory(ies)*.
+- `rm {OPTION}... {FILE}...` -- remove *file* (by default it does not remove directories).
   - Options (most popular):
     - f - ignore non-existing files,  
     - r - remove directories and their contents,
     - i - prompt before every removal,
     - v - explain at all time what is being done.
-- `install {options} source destination` -- copy files (often just compiled) into destination locations.
+- `install {OPTION}... {SOURCE}... {DIRECTORY}` -- copy files (often just compiled) into destination locations.
 ### View / Edit file contents
-- `touch file_name`  -- create empty file.
-- `cat {options} file_name` -- reads data from the file and gives their content as output.
-  - `cat >file_name` - create new file with content,
-  - `cat >>file_name` - append content to the end of file_name,
-  - `cat file1 >> file2` - append the contents of file1 to the end of file2.
+- `touch {OPTION}... {FILE}...`  -- change file timestamps or create empty file.
+- `cat {OPTION}... {FILE}...` -- reads data from the file and gives their content as output.
+  - `cat >{FILE}` - create new file with content,
+  - `cat >>{FILE}` - append content to the end of file_name,
+  - `cat {FILE_1} >> {FILE_2}` - append the contents of file1 to the end of file2.
   - Options (most popular):
     - n - number all output lines,
     - b - number non-empty output lines,
     - s - suppress repeated empty output lines.
-- `tac {options} file_name` -- concatenate and print files in reverse.
-- `nl {options} file_name` -- number lines of files.
-- `tail {options} file_name` -- output the last part of files.
+- `tac {OPTION}... {FILE}...` -- write each *file* to standard output, last line first.
+- `nl {OPTION}... {FILE}...` -- write each *file* to standard output, with line numbers added.
+- `tail {OPTION}... {FILE}...` -- output the last part of files (by default it's 10 lines).
   - Options (most popular):
     - n nums - print the last nums lines, instead of the default 10,
     - f - output appended data as the file grows.
-- `head {options} file_name` -- output the first part of files.
+- `head {OPTION}... {FILE}...` -- output the first part of files (by default it's 10 lines).
   - Options (most popular):
     - n nums - print the first nums lines, instead of the default 10.
-- `less file_name` -- display file contents one page at the time.
+- `less {FILE}...` -- display *file* contents one page at the time.
   - Key commands (most popular):
     - space bar - move down one page,
     - b - move up one page,
@@ -89,42 +93,45 @@
     - ?search_term - search backward from the current position for the search_term string,
     - n - when searching, to to the next occurrence,
     - N - when searching, go to the previous occurrence.
-- `od {options} file_name` -- dump files in octal and other formats.
-- `base64 {options} file_name` -- base64 encode/decode data and print to standard output.
+- `od {OPTION}... {FILE}...` -- write an unambiguous representation, octal bytes by default, of 
+*file* to standard output.
+- `base64 {OPTION}... {FILE}` -- base64 encode or decode *file*, or standard input, to standard
+output.
   - Options (most popular):
     - d - decode data
     - i - when decoding, ignore non-alphabet characters
-- `fold {options} file_name` -- wrap each input line to fit in specified width.
+- `fold {OPTION}... {FILE}...` -- wrap each input line to fit in specified width.
   - Options (most popular):
     - b - limit the width of the output by the number of bytes (e.x. b40)
-- `gedit file_name` -- text editor for the GNOME Desktop.
-- `sort {options} file_name` -- sort lines of text files.
+- `gedit {OPTION...} {FILE...}` -- text editor for the GNOME Desktop.
+- `sort {OPTION}... {FILE}...` -- sort lines of text files (write sorted concatenation of all 
+*file(s)* to standard output).
   - Options (most popular):
     - r - sort in reverse order
     - n - sort a file numerically
     - u - sort and remove duplicates
-- `test EXPRESSION` -- check file types and compare values.
-- `expand {options} file_name` -- convert tabs to spaces.
-- `unexpand {options} file_name` -- convert spaces to tabs.
-- `fmt {options} file_name` --  simple optimal text formatter.
-- `pr {options} file_name` -- convert text files for printing.
-- `split {options} file_name` -- split a file into pieces.
-- `csplit {options} file_name` -- split a file into sections determined by context lines.
-- `grep {options} PATTERNS file_name` -- print lines that match patterns.
-- `shuf {options} file_name` --  generate random permutations.
-- `uniq {options} file_name` -- report or omit repeated lines.
-- `comm {options} file_name` -- compare two sorted files line by line.
-- `tsort file_name` -- perform topological sort.
-- `cut {options} file_name` -- remove sections from each line of files.
-- `paste {options} file_name` -- merge lines of files.
-- `join {options} file_name1 file_name2` -- join lines of two files on a common field.
+- `test {EXPRESSION}` -- check file types and compare values (exit with the status determined by *expression*).
+- `expand {OPTION}... {FILE}...` -- convert tabs to spaces.
+- `unexpand {OPTION}... {FILE}...` -- convert spaces to tabs.
+- `fmt {OPTION}... {FILE}...` --  simple optimal text formatter (reformat each paragraph in the *file(s)*, writing to standard output).
+- `pr {OPTION}... {FILE}...` -- convert text files for printing.
+- `split {OPTION}... {FILE[PREFIX]}` -- split a file into pieces.
+- `csplit {OPTION}... {FILE} {PATTERN}...` -- split a file into sections determined by context lines.
+- `grep {OPTION}... {PATTERN} {FILE...}` -- print lines that match patterns.
+- `shuf {OPTION}... {FILE}` --  generate random permutations.
+- `uniq {OPTION}... {INPUT {OUTPUT}}` -- report or omit repeated lines (filter adjacent matching lines from *input*, writting to *output*.
+- `comm {OPTION}... {FILE_1} {FILE_2}` -- compare sorted files *file_1* and *file_2* line by line.
+- `tsort {OPTION} {FILE}` -- perform topological sort.
+- `cut {OPTION}... {FILE}...` -- remove sections from each line of files.
+- `paste {OPTION}... {FILE}...` -- merge lines of files.
+- `join {OPTION}... {FILE_1} {FILE_2)` -- join lines of two files on a common field.
 
 ### File summary
-- `wc file_name` -- show information about the file: number of lines, word count, byte and characters count. 
-- `sum {options} file_name` -- checksum and count the blocks in a file.
-- `cksum {options} file_name` -- checksum and count the bytes in a file.
-- `md5sum {options} file_name` -- compute and check MD5 message digest.
-- `sha1sum {options} file_name` -- compute and check SHA1 message digest.
+- `wc {OPTION}... {FILE}...` -- show information about the file: number of lines, word count, byte and characters count. 
+- `sum {OPTION}... {FILE}...` -- checksum and count the blocks in a file.
+- `cksum {FILE}...` -- checksum and count the bytes in a file.
+- `md5sum {OPTION}... {FILE}...` -- compute and check MD5 message digest.
+- `sha1sum {OPTION}... {FILE}` -- compute and check SHA1 message digest.
 
 ### Compress & extract files
 WIP
