@@ -290,25 +290,53 @@ stored in the directory,
 set. If the execute permission is not set, you might still be able to see/modify the program
 code(provided read & write permissions are set), but not run it.
 
-The table below gives all possible combinations of a file permission that each file can have:
-
-| Number        | Symbol          | Permission              |        
-| :------------:|:---------------:|:------------------------|
-| 0             | ---             | no permission           |
-| 1             | --x             | execute                 |
-| 2             | -w-             | write                   |
-| 3             | -wx             | write and execute       |
-| 4             | r--             | read                    |
-| 5             | r-x             | read and execute        |
-| 6             | rw-             | read and write          |
-| 7             | rwx             | read, write and execute |
-
 On the picture below we can see that the owner of the *random_file.txt* has `rw-` permission, the group
 and the others have `r--` permission. The first sign of permission stands for type of the file.
 
 ![F_Permission](img/f_permission.png)
 
- 
+The most popular command that enable us to change the file permission (read, write, execute) 
+for the owner, group and the world has the syntax as follow:
+- **`chmod`**`{PERMISSION} {FILE}...` -- Change file permission.
+
+The table below gives all possible combinations of a file *permission* that each file can have:
+
+| Number        | Symbol          | Permission              |        
+| :------------:|:---------------:|:------------------------|
+| 0             | ---             | No permission           |
+| 1             | --x             | Execute                 |
+| 2             | -w-             | Write                   |
+| 3             | -wx             | Write + Execute         |
+| 4             | r--             | Read                    |
+| 5             | r-x             | Read + Execute          |
+| 6             | rw-             | Read + Write            |
+| 7             | rwx             | Read + Write + Execute  |
+
+There are 2 ways to use **`chmod`** command:
+- By specifying permission as a **three-digit octal number** (you change permission for all 3 owners) ,
+![number-mode](img/f-permission-number-mode.png)
+
+- By specifying permission as **symbolic mode** (so that you can modify permission of a specific group).
+![symbolic-mode](img/f-permission-symbolic-mode.png)
+
+The table below contains all symbols you will need in order to use symbolic mode:
+
+| Symbol        | Meaning                                                  |       
+| :------------:|:--------------------------------------------------------:|
+| +             | Add a permission to a file or directory                  |
+| -             | Remove the permission                                    |
+| =             | Set a permission and overwrite the permission set earlier|
+| u             | User/owner                                               |
+| g             | Group                                                    |
+| o             | Others                                                   |
+| a             | All                                                      |
+
+
+In order to change file ownership or group, the following commands are used:
+- **`chown`**`{OPTIONS}... {OWNER{:GROUP}} {FILE}...` -- change file owner and group,
+- **`chgrp`**`{OPTIONS}... {GROUP} {FILE}...` -- change group ownership.
+
+
 ## File system management
 Work in progress
 ## Process management
