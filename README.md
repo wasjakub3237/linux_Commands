@@ -28,15 +28,15 @@ for example,` man ls`.
 ## Managing files & directories
 ### Basic commands
 
-- **`cd`**`examlpe` -- change directory to *example*.
+- **`cd`**`examlpe` -- Change directory to *example*.
   - **`cd`**`..` -- move up one directory,
   - **`cd`**`../..` -- move up two directory,
   - **`cd`**`-` -- change to the previous directory,
   - **`cd`**`~` -- change to home directory.
   
-- **`pwd`** -- print the absolute path of current directory.
+- **`pwd`** -- Print the absolute path of current directory.
 
-- **`ls`**`{OPTION}... {FILE}...` -- list directory contents.
+- **`ls`**`{OPTION}... {FILE}...` -- List directory contents.
   - Options (most popular):
     - *t* - sort the file by modification time,
     - *1* - display one file per line, 
@@ -47,7 +47,7 @@ for example,` man ls`.
     - *S* - sort by file size, largest first
     - *--group-directories-first* - group directories before files.
 
-- **`cp`**`{OPTION}... {SOURCE}... {DIRECTORY}...`  -- copy *source(s)* to *directory*.
+- **`cp`**`{OPTION}... {SOURCE}... {DIRECTORY}...`  -- Copy *source(s)* to *directory*.
   - Options (most popular):
     - *i* - ask for permission before user overwrite the destination file,
     - *r* - copy the entire directory structure,
@@ -55,31 +55,31 @@ for example,` man ls`.
     and the file permission-bits of each source file in the corresponding destination
     file. 
 
-- **`mv`**-- move (rename) files and directories
+- **`mv`**-- Move (rename) files and directories.
   - **`mv`**`{OPTION}... {SOURCE} {DEST}` - rename *source* to *dest*,
   - **`mv`**`{OPTION}... {SOURCE}... {DIRECTORY}` - move *source(s)* to *directory*.
   - Options (most popular):
     - *i* - prompt before overwriting an existing file,
     - *n* - never overwrite an existing file.
 
-- **`mkdir`**`{OPTION}... {DIRECTORY}...` -- create the *directory(ies)*, if the do not already exist.
+- **`mkdir`**`{OPTION}... {DIRECTORY}...` -- Create the *directory(ies)*, if the do not already exist.
 
-- **`rmdir`**`{OPTION}... {DIRECTORY}...` -- remove empty *directory(ies)*.
+- **`rmdir`**`{OPTION}... {DIRECTORY}...` -- Remove empty *directory(ies)*.
 
-- **`rm`**`{OPTION}... {FILE}...` -- remove *file* (by default it does not remove directories).
+- **`rm`**`{OPTION}... {FILE}...` -- Remove *file* (by default it does not remove directories).
   - Options (most popular):
     - *f* - ignore non-existing files,  
     - *r* - remove directories and their contents,
     - *i* - prompt before every removal,
     - *v* - explain at all time what is being done.
 
-- **`install`**` {OPTION}... {SOURCE}... {DIRECTORY}` -- copy files (often just compiled) into destination locations.
+- **`install`**` {OPTION}... {SOURCE}... {DIRECTORY}` -- Copy files (often just compiled) into destination locations.
 
 ### View / Edit file contents
 
-- **`touch`**`{OPTION}... {FILE}...`  -- change file timestamps or create empty file.
+- **`touch`**`{OPTION}... {FILE}...`  -- Change file timestamps or create empty file.
 
-- **`cat`**`{OPTION}... {FILE}...` -- reads data from the file and gives their content as output.
+- **`cat`**`{OPTION}... {FILE}...` -- Reads data from the file and gives their content as output.
   - **`cat`**`>{FILE}` - create new file with content,
   - **`cat`**`>>{FILE}` - append content to the end of file_name,
   - **`cat`**`{FILE_1} >> {FILE_2}` - append the contents of file1 to the end of file2.
@@ -88,20 +88,20 @@ for example,` man ls`.
     - *b* - number non-empty output lines,
     - *s* - suppress repeated empty output lines.
 
-- **`tac`**`{OPTION}... {FILE}...` -- write each *file* to standard output, last line first.
+- **`tac`**`{OPTION}... {FILE}...` -- Write each *file* to standard output, last line first.
 
-- **`nl`**`{OPTION}... {FILE}...` -- write each *file* to standard output, with line numbers added.
+- **`nl`**`{OPTION}... {FILE}...` -- Write each *file* to standard output, with line numbers added.
 
-- **`tail`**`{OPTION}... {FILE}...` -- output the last part of files (by default it's 10 lines).
+- **`tail`**`{OPTION}... {FILE}...` -- Output the last part of files (by default it's 10 lines).
   - Options (most popular):
     - *n* nums - print the last nums lines, instead of the default 10,
     - *f* - output appended data as the file grows.
 
-- **`head`**`{OPTION}... {FILE}...` -- output the first part of files (by default it's 10 lines).
+- **`head`**`{OPTION}... {FILE}...` -- Output the first part of files (by default it's 10 lines).
   - Options (most popular):
     - *n* nums - print the first nums lines, instead of the default 10.
 
-- **`less`**`{FILE}...` -- display *file* contents one page at the time.
+- **`less`**`{FILE}...` -- Display *file* contents one page at the time.
   - Key commands (most popular):
     - space bar - move down one page,
     - b - move up one page,
@@ -113,73 +113,74 @@ for example,` man ls`.
 - **`od`**`{OPTION}... {FILE}...` -- write an unambiguous representation, octal bytes by default, of 
 *file* to standard output.
 
-- **`base64`**`{OPTION}... {FILE}` -- base64 encode or decode *file*, or standard input, to standard
+- **`base64`**`{OPTION}... {FILE}` -- Base64 encode or decode *file*, or standard input, to standard
 output).
   - Options (most popular):
     - *d* - decode data
     - *i* - when decoding, ignore non-alphabet characters
 
-- **`fold`**`{OPTION}... {FILE}...` -- wrap each input line to fit in specified width.
+- **`fold`**`{OPTION}... {FILE}...` -- Wrap each input line to fit in specified width.
   - Options (most popular):
     - *b* - limit the width of the output by the number of bytes (e.x. b40)
 
-- **`gedit`**`{OPTION...} {FILE...}` -- text editor for the GNOME Desktop.
+- **`gedit`**`{OPTION...} {FILE...}` -- Text editor for the GNOME Desktop.
 
-- **`sort`**`{OPTION}... {FILE}...` -- sort lines of text files (write sorted concatenation of all 
+- **`sort`**`{OPTION}... {FILE}...` -- Sort lines of text files (write sorted concatenation of all 
 *file(s)* to standard output).
   - Options (most popular):
     - *r* - sort in reverse order
     - *n* - sort a file numerically
     - *u* - sort and remove duplicates
 
-- **`test`**`{EXPRESSION}` -- check file types and compare values (exit with the status determined by *expression*).
+- **`test`**`{EXPRESSION}` -- Check file types and compare values (exit with the status determined by *expression*).
 
-- **`expand`**`{OPTION}... {FILE}...` -- convert tabs to spaces.
+- **`expand`**`{OPTION}... {FILE}...` -- Convert tabs to spaces.
 
-- **`unexpand`**`{OPTION}... {FILE}...` -- convert spaces to tabs.
+- **`unexpand`**`{OPTION}... {FILE}...` -- Convert spaces to tabs.
 
-- **`fmt`**`{OPTION}... {FILE}...` --  simple optimal text formatter (reformat each paragraph in the *file(s)*, writing to standard output).
+- **`fmt`**`{OPTION}... {FILE}...` --  Simple optimal text formatter (reformat each paragraph in the *file(s)*, writing to standard output).
 
-- **`pr`**`{OPTION}... {FILE}...` -- convert text files for printing.
+- **`pr`**`{OPTION}... {FILE}...` -- Convert text files for printing.
 
-- **`split`**`{OPTION}... {FILE[PREFIX]}` -- split a file into pieces.
+- **`split`**`{OPTION}... {FILE[PREFIX]}` -- Split a file into pieces.
 
-- **`csplit`**`{OPTION}... {FILE} {PATTERN}...` -- split a file into sections determined by context lines.
+- **`csplit`**`{OPTION}... {FILE} {PATTERN}...` -- Split a file into sections determined by context lines.
 
-- **`grep`**`{OPTION}... {PATTERN} {FILE...}` -- print lines that match patterns.
+- **`grep`**`{OPTION}... {PATTERN} {FILE...}` -- Print lines that match patterns.
 
-- **`shuf`**`{OPTION}... {FILE}` --  generate random permutations.
+- **`shuf`**`{OPTION}... {FILE}` --  Generate random permutations.
 
-- **`uniq`**`{OPTION}... {INPUT {OUTPUT}}` -- report or omit repeated lines (filter adjacent matching lines from *input*, writting to *output*.
+- **`uniq`**`{OPTION}... {INPUT {OUTPUT}}` -- Report or omit repeated lines (filter adjacent matching lines from *input*, writting to *output*.
 
-- **`comm`**`{OPTION}... {FILE_1} {FILE_2}` -- compare sorted files *file_1* and *file_2* line by line.
+- **`comm`**`{OPTION}... {FILE_1} {FILE_2}` -- Compare sorted files *file_1* and *file_2* line by line.
 
-- **`tsort`**`{OPTION} {FILE}` -- perform topological sort.
+- **`tsort`**`{OPTION} {FILE}` -- Perform topological sort.
 
-- **`cut`**`{OPTION}... {FILE}...` -- remove sections from each line of files.
+- **`cut`**`{OPTION}... {FILE}...` -- Remove sections from each line of files.
 
-- **`paste`**`{OPTION}... {FILE}...` -- merge lines of files.
+- **`paste`**`{OPTION}... {FILE}...` -- Merge lines of files.
 
-- **`join`**`{OPTION}... {FILE_1} {FILE_2)` -- join lines of two files on a common field.
+- **`join`**`{OPTION}... {FILE_1} {FILE_2)` -- Join lines of two files on a common field.
 
 ### File summary
 
-- **`wc`**`{OPTION}... {FILE}...` -- show information about the file: number of lines, word count, byte and characters count. 
+- **`wc`**`{OPTION}... {FILE}...` -- Show information about the file: number of lines, word count, byte and characters count. 
 
-- **`sum`**`{OPTION}... {FILE}...` -- checksum and count the blocks in a file.
+- **`sum`**`{OPTION}... {FILE}...` -- Checksum and count the blocks in a file.
 
-- **`cksum`**`{FILE}...` -- checksum and count the bytes in a file.
+- **`cksum`**`{FILE}...` -- Checksum and count the bytes in a file.
 
-- **`md5sum`**`{OPTION}... {FILE}...` -- compute and check MD5 message digest.
+- **`md5sum`**`{OPTION}... {FILE}...` -- Compute and check MD5 message digest.
 
-- **`sha1sum`**`{OPTION}... {FILE}` -- compute and check SHA1 message digest.
+- **`sha1sum`**`{OPTION}... {FILE}` -- Compute and check SHA1 message digest.
 
 ### Archive & Compress & Extract files
+
 Files that have a **.tar.gz** or a **.tar.bz2** extension are compressed archive files. A file with just a **.tar** extension is 
 is a single, uncompressed file, that stores many files. The **.gz** or **.bz2** extension suffix indicates that the archive has been compressed, using
 either the gzip or bzip2 compression algorithm. 
 
-- **`tar`**`{OPTION}... {ARCHIVE_FILE} {FILE_OR_DIRECTORY_TO_BE_ARCHIVED}` -- create Archive and extract the Archive files.
+- **`tar`**`{OPTION}... {ARCHIVE_FILE} {FILE_OR_DIRECTORY_TO_BE_ARCHIVED}` -- Create Archive and extract the Archive files.
   - Options (most popular):
     - *c -* create archive,
     - *x -* extract archive,
@@ -254,23 +255,28 @@ either the gzip or bzip2 compression algorithm.
     ```
     *Above command will append **paris.jpg** file to an archive tar file called **photos_france.tar**. The command tar does not
     support appending files to compressed tar.gz or tar.bz2 files.*
+    
 ### Special file types (links)
+
 A **hard link** is a direct link to the data on disk. This means data can be accessed directly via an original filename or a 
 hard link. Both the original file and the hard link are direct links to the data on disk. The use of a hard link allows 
 multiple filenames to be associated with the same data on disk.
 
 A **symbolic link** (also sometimes known as a soft link) does not link directly to the data on disk but to another link to the 
 data on disk. On most operating systems folders may only be linked using a symbolic link.
-- **`ln`**`{OPTION}... {TARGET} {FILE}` -- make links between files (if the -s option is not specified, it will create 
+
+- **`ln`**`{OPTION}... {TARGET} {FILE}` -- Make links between files (if the -s option is not specified, it will create 
 hard link).
   - Options (most popular):
     - *s -* create symbolic link instead of hard link.
-- **`readlink`**`{OPTIONS}... {FILE}...` -- print resolved symbolic links or canonical file names.
-- **`unlink`**`{FILE}` -- remove the specified file.
+- **`readlink`**`{OPTIONS}... {FILE}...` -- Print resolved symbolic links or canonical file names.
+- **`unlink`**`{FILE}` -- Remove the specified file.
+
 ### File permission
+
 Every file and directory on Linux system is assigned 3 types of owner, given below:
 - **User** - Who is the owner of a file. By default, the person who created a file becomes its
-owner,
+owner.
 - **Group** - Can contain multiple users. All users belonging to a group will have the same 
 access permissions to the file. Suppose you have a project where a number of people require 
 access to a file. Instead of manually assigning permissions to each user, you could add all 
@@ -282,10 +288,11 @@ else.
 
 In Linux, every file and directory has it's own three permissions defined for all the 3 owners
 discussed above:
-- **Read** - This permission allows you to open and read a file,
+
+- **Read** - This permission allows you to open and read a file.
 - **Write** - The write permission gives you the authority to modify the contents of a file. 
 The write permission on a directory gives you the authority to add, remove and rename files 
-stored in the directory,
+stored in the directory.
 - **Execute** - In Linux, you cannot run a program unless the execute permission is
 set. If the execute permission is not set, you might still be able to see/modify the program
 code(provided read & write permissions are set), but not run it.
@@ -313,7 +320,8 @@ The table below gives all possible combinations of a file *permission* that each
 | 7             | rwx             | Read + Write + Execute  |
 
 There are 2 ways to use **`chmod`** command:
-- By specifying permission as a **three-digit octal number** (you change permission for all 3 owners) ,
+
+- By specifying permission as a **three-digit octal number** (you change permission for all 3 owners).
 ![number-mode](img/f-permission-number-mode.png)
 
 - By specifying permission as **symbolic mode** (so that you can modify permission of a specific group).
@@ -333,12 +341,25 @@ The table below contains all symbols you will need in order to use symbolic mode
 
 
 In order to change file ownership or group, the following commands are used:
-- **`chown`**`{OPTIONS}... {OWNER{:GROUP}} {FILE}...` -- change file owner and group,
-- **`chgrp`**`{OPTIONS}... {GROUP} {FILE}...` -- change group ownership.
+- **`chown`**`{OPTIONS}... {OWNER{:GROUP}} {FILE}...` -- Change file owner and group.
+- **`chgrp`**`{OPTIONS}... {GROUP} {FILE}...` -- Change group ownership.
 
 
 ## File system management
-Work in progress
+
+- **`df`**`{OPTION}... {FILE}...` -- Display information related to file systems 
+about total space and available space. If no file name is given, it displays the 
+space available on all currently mounted file systems.
+- **`du`**`{OPTION}... {FILE}...` -- Summarize disk usage of the set of files, 
+recursively for directories.
+  - Options (most popular):
+    - *c* - produce a grand total,
+    - *h* - print size in human readable format,
+    - *d* - display only a total size for each argument.
+- **`stat`**`{OPTION}... {FILE}...` -- Display file or file system status.
+- **`truncate`**`{OPTION}... {FILE}...` --  Shrink or extend the size of a file to the 
+specified size.
+
 ## Process management
 Work in progrss
 ## Managing users, groups and the system
