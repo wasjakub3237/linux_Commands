@@ -391,17 +391,15 @@ By default, command is run every 2 seconds and watch will run until interrupted.
 **`apt-get`**`{OPTIONS}... {COMMAND}` -- is a command-line tool which helps in handling packages in Linux. 
 Its main task is to retrieve the information and packages from the authenticated
 sources for installation, upgrade and removal of packages along with their
-dependencies. Here APT stands for the ***Advanced Packaging Tool***. **`apt-get`**
-basically works on a database of available packages. If you don’t update this 
-database, the system won’t know if there are newer packages available or not. 
+dependencies. Here APT stands for the ***Advanced Packaging Tool***. 
 
   - Commands (most popular):
-    - *`update`* - synchronize the package index files from their sources again. apt-get basically works on a database of available packages. 
+    - *`update`* - synchronize the package index files from their sources again. `apt-get` basically works on a database of available packages. 
     If you don’t update this database, the system won’t know if there are newer packages available or not. 
     - *`upgrade`* -  install the latest versions of the packages currently installed 
     on the user’s system from the sources enumerated in */etc/apt/sources.list*. The 
     installed packages which have new packages available are retrieved and installed.
-    You need to perform an update before the upgrade, so that apt-get knows that new
+    You need to perform an update before the upgrade, so that `apt-get` knows that new
     versions of packages are available.
     - *`install`* - this command is used to install or upgrade packages. It is 
     followed by one or more package names the user wishes to install. All the 
@@ -427,51 +425,63 @@ database, the system won’t know if there are newer packages available or not.
     
 **`su`**`{OPTION}... {USERNAME}` -- Change user ID or become superuser.
  
-**`sudo`** --
+**`sudo`** -- Execute a command as another user.
  
-**`who`** --
+**`who`**`{OPTIONS}...` -- Print information about users who are currently logged in.
  
-**`w`** -- 
+**`w`**`{OPTIONS}...` -- Displays information about the users currently on the machine, and 
+their processes.  The header shows, in this order, the current time, how long the 
+system has been running, how many users are currently logged on, and the system
+load averages for the past 1, 5, and 15 minutes.
+  - Options (most popular):
+    - *s* - use the short format, don't print the login time, JCPU or PCPU times.
+    - *user* - show information about the specified user only.
+    - *i* - display IP address instead of hostname for *from* field.
+    
+**`whoami`**`{OPTION}...` - Print the user name associated with the current effective user ID.
  
-**`whoami`** --
+**`groups`**`{OPTION}... {USERNAME}...` -- Print group memberships for each USERNAME or, if no USERNAME is specified, 
+for the current process.
  
-**`groups`** --
+**`groupadd`**`{OPTIONS}... {GROUP}` -- Create a new group.
  
-**`groupadd`** --
- 
-**`groupmod`** --
- 
-**`groupdel`** --
- 
-**`users`** -- 
- 
-**`useradd`** --
- 
-**`usermod`** --
- 
-**`userdel`** --
- 
-**`logname`** --
- 
-**`id`** --
- 
-**`arch`** -- 
- 
-**`date`** --
- 
-**`uname`** --
- 
-**`hostname`** --
- 
-**`hostid`** --
- 
-**`uptime`** --
- 
-**`lsmod`** --
- 
-**`tty`** --
+**`groupmod`**`{OPTIONS}... {GROUP}` -- Modify a group definition on the system. 
 
-
+**`groupdel`**`{OPTIONS}... {GROUP} -- Delete a group.
+ 
+**`users`**`{OPTIONS}...` -- Print the user names of users currently logged in the
+current host. 
+ 
+**`useradd`**`{OPTIONS}... {LOGIN}` -- Create a new user or update default new user information. 
+ 
+**`usermod`**`{OPTIONS}... {LOGIN}` -- Modify a user account.
+ 
+**`userdel`**`{OPTIONS}... {LOGIN}` -- Delete a user account and related files.
+ 
+**`logname`**`{OPTION}...` -- Print user's login name.
+ 
+**`id`**`{OPTION}... {USER}` -- Print user and group information for the specified *user*,
+or (when *user* omitted) for the current user.
+ 
+**`arch`**`{OPTION}...` -- Print machine architecture.
+ 
+**`date`**`{OPTIONS}...` -- Print or set the system date and time.
+ 
+**`uname`**`{OPTION}...` -- Print system information.
+  - Options (most popular):
+    - *a* - print all available information.
+    - *r* - print the kernel release.
+    - *v* - print the kernel version.
+    
+**`hostname`**`{OPTIONS}...` -- Show or set the system's host name.
+ 
+**`hostid`**`{OPTIONS}...` -- Print the numeric identifier fot the current host.
+ 
+**`uptime`**`{OPTIONS}...` -- Print how long the system has benn running. 
+ 
+**`lsmod`** -- Show the status of modules in the Linux Kernel.
+ 
+**`tty`**`{OPTION}...` -- Print the file name of the terminal connected to standard input.
 
 ## I/O commands
 Work in progress
