@@ -387,7 +387,92 @@ By default, command is run every 2 seconds and watch will run until interrupted.
 **`systemctl hibernate`** -- Hibernate the system.
  
 ## Managing users, groups and the system
-Work in progress
+
+**`apt-get`**`{OPTIONS}... {COMMAND}` -- is a command-line tool which helps in handling packages in Linux. 
+Its main task is to retrieve the information and packages from the authenticated
+sources for installation, upgrade and removal of packages along with their
+dependencies. Here APT stands for the ***Advanced Packaging Tool***. **`apt-get`**
+basically works on a database of available packages. If you don’t update this 
+database, the system won’t know if there are newer packages available or not. 
+
+  - Commands (most popular):
+    - *`update`* - synchronize the package index files from their sources again. apt-get basically works on a database of available packages. 
+    If you don’t update this database, the system won’t know if there are newer packages available or not. 
+    - *`upgrade`* -  install the latest versions of the packages currently installed 
+    on the user’s system from the sources enumerated in */etc/apt/sources.list*. The 
+    installed packages which have new packages available are retrieved and installed.
+    You need to perform an update before the upgrade, so that apt-get knows that new
+    versions of packages are available.
+    - *`install`* - this command is used to install or upgrade packages. It is 
+    followed by one or more package names the user wishes to install. All the 
+    dependencies of the desired packages will also be retrieved and installed. 
+    The user can also select the desired version by following the package name 
+    with an ‘equals’ and the desired version number.
+    - *`remove`* -  removes the packages (it does not remove any configuration 
+    files created by the package).
+    - *`purge`* - removes the packages, and also removes any configuration files 
+    related to the packages.
+    - *`clean`* - clean the local repository of retrieved package files.
+    - *`autoremove`* - removes libraries and packages that were installed 
+    automatically to satisfy the dependencies of another installed package. 
+    If that package is removed, these automatically installed packages are 
+    useless in the system.
+    
+**`passwd`**`{OPTIONS}... {LOGIN}` -- Change user password.
+  - Options (most popular):
+    - *d* - delete a user's password (it will set the named account passwordless),
+    - *e* - immediately expire an account's password (force a user to change his/her password at the user's next login),
+    - *x* - set the maximum number of days a password remains valid (after *MAX_DAYS*, the password is required to be changed),
+    - *w* - set the number of days of warning before a password change is required.
+    
+**`su`**`{OPTION}... {USERNAME}` -- Change user ID or become superuser.
+ 
+**`sudo`** --
+ 
+**`who`** --
+ 
+**`w`** -- 
+ 
+**`whoami`** --
+ 
+**`groups`** --
+ 
+**`groupadd`** --
+ 
+**`groupmod`** --
+ 
+**`groupdel`** --
+ 
+**`users`** -- 
+ 
+**`useradd`** --
+ 
+**`usermod`** --
+ 
+**`userdel`** --
+ 
+**`logname`** --
+ 
+**`id`** --
+ 
+**`arch`** -- 
+ 
+**`date`** --
+ 
+**`uname`** --
+ 
+**`hostname`** --
+ 
+**`hostid`** --
+ 
+**`uptime`** --
+ 
+**`lsmod`** --
+ 
+**`tty`** --
+
+
+
 ## I/O commands
 Work in progress
 ## Network
