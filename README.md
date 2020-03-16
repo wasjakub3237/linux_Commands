@@ -447,7 +447,7 @@ for the current process.
  
 **`groupmod`**`{OPTIONS}... {GROUP}` -- Modify a group definition on the system. 
 
-**`groupdel`**`{OPTIONS}... {GROUP} -- Delete a group.
+**`groupdel`**`{OPTIONS}... {GROUP}` -- Delete a group.
  
 **`users`**`{OPTIONS}...` -- Print the user names of users currently logged in the
 current host. 
@@ -484,12 +484,44 @@ or (when *user* omitted) for the current user.
 **`tty`**`{OPTION}...` -- Print the file name of the terminal connected to standard input.
 
 ## I/O commands
-Work in progress
-## Network
-Work in progress
-## Hardware support
-Work in progress
-## Other
-Work in progress
 
+**`echo`**`{OPTION}... {STRING}...` -- Display a line of text.
+
+**`yes`**`{STRING}`... -- Output a string repeatedly until killed.
+
+**`read`** -- Read from a file descriptor. 
+
+**`tee`**`{Option}... {FILE}...` -- Read from standard input and write to standard output and files.
+
+## Network
+
+**`iwconfig`** -- Configure a wireless network interface.
+
+**`iwgetid`** -- Report ESSID, NWID or AP/Cell Address of wireless network.
+
+**`iwlist`** -- Get more detailed wireless information from a wireless interface.
+
+**`wget`**`{OPTION... {URL}...` -- The non-interactive network downloader.
+
+## Hardware support
+
+**`lspci`**`{OPTION}...` -- List all PCI devices.
+
+**`lsusb`**`{OPTION}...`-- List USB devices.
+
+**`lscpu`**`{OPTION}...` -- Display information about the CPU architecture.
+
+**`lshw`**`{OPTION}...` -- Small toll to extract detailed information on the hardware configuration of the machine.
+
+## Other
+
+**`clear`** -- Clear the terminal screen.
+
+**`man`** -- An interface to the on-line reference manuals.
+
+**`sleep`**`{NUMBER}` -- Delay for a specified amount of time.
+
+**`factor`**`{NUMBER}` -- Factor numbers.
+
+**`seq`**`{OPTION}... {FIRST} {INCRMENT} {LAST}` -- Print a sequence of numbers.
 
