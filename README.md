@@ -1,7 +1,5 @@
  ![Linux](img/linux.jpg)
 
-
-
 ## Table of contents
 
 - [Linux Commands](#linux-commands)
@@ -524,4 +522,3 @@ or (when *user* omitted) for the current user.
 **`factor`**`{NUMBER}` -- Factor numbers.
 
 **`seq`**`{OPTION}... {FIRST} {INCRMENT} {LAST}` -- Print a sequence of numbers.
-
