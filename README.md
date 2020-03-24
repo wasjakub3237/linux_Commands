@@ -2,22 +2,32 @@
 
 ## Table of contents
 
-- [Linux Commands](#linux-commands)
+- [Linux commands](#linux-commands)
   - [Managing files & directories](#managing-files--directories)
     - [Basic commands](#basic-commands)
     - [View / Edit file contents](#view--edit-file-contents)
-    - [Archive & Compress & extract files](#archive--compress--extract-files)
+    - [File summary](#file-summary)
+    - [Archive & Compress & Extract files](#archive--compress--extract-files)
     - [Special file types (links)](#special-file-types-links)
     - [File permission](#file-permission)
   - [File system management](#file-system-management)
   - [Process management](#process-management)
-  - [Managing users, groups and the system](#managing-users-,-groups-and-the-system)
-  - [I/O commands](#i/o-commands)
+  - [Managing users, groups and the system](#managing-users-groups-and-the-system)
+  - [I/O commands](#io-commands)
   - [Network](#network)
   - [Hardware support](#hardware-support)
   - [Other](#other)
-- [Windows Commands](#windows-commands)
-- [Git Commands](#git-commands)
+- [Windows commands](#windows-commands)
+- [Git commands](#git-commands)
+  - [User configuration](#user-configuration)
+  - [Repository setup](#repository-setup)
+  - [Inspect & Compare](#inspect--compare)
+  - [Tracking path changes](#tracking-path-changes)
+  - [Staging & Snapshot](#staging--snapshot)
+  - [Branches & Merging](#branches--merging)
+  - [Remote Repositories](#remote-repositories)
+  - [Rewrite history](#rewrite-history)
+  - [Temporary commits](#temporary-commits)
 
 # Linux commands
 
@@ -533,12 +543,108 @@ ___
 
 # Git commands
 
+## User configuration
 
+- **`git config`**`--global user.name '{firstname lastname}'` -- Set a name for identification.
 
+- **`git config`**`--global user.email '{email}'` -- Set associated email address.
 
+## Repository setup
 
+- **`git init`** - Initialize an existing directory as a Git repository.
 
+- **`git clone`**`{url}` - Retrieve an entire repository from a hosted location via URL.
 
+## Inspect & Compare
+
+- **`git log`** -- Show the commit history for the currently active branch.
+
+- **`git log`**`branchB..branchA` -- Show the commits on **branchA** that are not on **branchB**.
+
+- **`git log`**`--follow {file}` -- Show the commits that changed file.
+
+- **`git diff`**`branchB..branchA` -- Show difference of what is in **branchA** that is not in **branchB**.
+
+## Tracking path changes
+
+- **`git rm`**`{file}` - Delete the file from project and stage the removal for commit.
+
+- **`git mv`**`{existing_path} {new_path}` - Change an existing file path and stage the move.
+
+## Staging & Snapshot
+
+- **`git status`** -- Show modified files in working directory, staged for next commit.
+
+- **`git add`**`{file}` -- Add a file as it looks now to staging area for your next commit. Use `git add .` to add all files.
+
+- **`git reset`**`{file}` -- Unstage a file while retaining changes in working directory.
+
+- **`git diff`** -- Difference of what is changed but not staged.
+
+- **`git diff`**`--staged` -- Difference of what is staged but not yet committed.
+
+- **`git commit`**`-m {commit_message}` -- Commit your staged content as a new commit snapshot.
+
+- **`git revert`**`{commit}` -- Create new commit that undoes all of the changes made in `{commit}`, then
+  apply it to the current branch.
+
+- **`git clean`**`-n` -- Shows which untracked files would be removed from working directory.
+  Replace the `-f` flag with the `-n` flag to execute the clean.
+
+## Branches & Merging
+
+- **`git branch`** -- List your branches. 
+
+- **`git branch`**`{branch_name}` -- Create a new branch at the current commit.
+
+- **`git checkout`**`{branch_name}` -- Switch to another branch and check it out into your working directory.
+  Use `-b` flag to create and check out a new branch.
+
+- **`git branch`**`-d {branch_name}` -- Delete a branch.
+
+- **`git merge`**`{branch_name}` -- Merge the specified branch's history into the current one.
+
+## Remote Repositories
+
+- **`git remote add`**`{remote_alias} {url}` -- Connect your local repository to a remote repository.
+
+- **`git fetch`**`{remote_alias}` -- Fetch down all the branches from that Git remote.
+
+- **`git merge`**`{remote_alias}/{branch_name}` -- Merge a remote branch into your current branch to bring it up to date.
+
+- **`git push`** -- Transmit local branch commits to the remote repository branch.
+
+- **`git push`**`-u {remote_alias} {branch_name}` -- Transmit local, non-master branch commits to the remote repository as a
+  new branch. `-u` stands for `--set-upstream`. You can also use `origin` instead of `{remote_alias}`.
+
+- **`git push`**`--force` -- Overwrite remote repository with local working directory.
+:warning: Command not recommended for beginners.
+
+- **`git pull`** -- Fetch and merge any commits from the tracking remote branch.
+
+## Rewrite history
+
+- **`git commit`**`--amend` -- Replace the last commit with staged changes and last commit combined. Use with
+  nothing staged to edit commit's message.
+
+- **`git rebase`**`{branch_name}` -- Apply any commits of current branch ahead of specified one.
+
+- **`git reset`**`--hard {commit}` -- Clear staging area, rewrite working tree from specified commit. Most often
+  used with `HEAD`, which points on the latest commit.
+
+- **`git rm`**`--cached {file}` -- Stop tracking specified file.
+
+- **`git reflog`** -- Show a log of changes to the local repository's HEAD. Add `--all` to show all refs.
+
+## Temporary commits
+
+- **`git stash`** -- Save modified and staged changes.
+
+- **`git stash list`** -- List stack-order of stashed file changes.
+
+- **`git stash pop`** -- Write working from top of stash stack.
+
+- **`git stash drop`** -- Discard the changes from top of stash stack.
 
 
 
