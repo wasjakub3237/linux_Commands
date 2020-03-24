@@ -618,7 +618,6 @@ ___
   new branch. `-u` stands for `--set-upstream`. You can also use `origin` instead of `{remote_alias}`.
 
 - **`git push`**`--force` -- Overwrite remote repository with local working directory.
-:warning: Command not recommended for beginners.
 
 - **`git pull`** -- Fetch and merge any commits from the tracking remote branch.
 
