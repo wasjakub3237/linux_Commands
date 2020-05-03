@@ -543,6 +543,8 @@ ___
 
 # Git commands
 
+This section was coppied from [princeelector](https://github.com/princeelector/git-and-github-guide) . Down below you can find most frequently used git commands.
+
 ## User configuration
 
 - **`git config`**`--global user.name '{firstname lastname}'` -- Set a name for identification.
